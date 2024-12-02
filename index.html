@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Income-Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="container mx-auto p-6">
+      <h1 class="text-center text-4xl mb-6">Income Expense Calculator</h1>
+      <!--------Filter-------------->
+      <div class="mb-6 text-center">
+        <label class="mr-4">Show:</label>
+        <input type="radio" id="all" name="filter" value="income" checked />
+        <label for="all">All</label>
+        <input type="radio" id="income" name="filter" value="income" />
+        <label for="income">Income</label>
+        <input type="radio" id="expenses" name="filter" value="income" />
+        <label for="expenses">Expenses</label>
+      </div>
+      <!-----Input------------------------>
+      <div class="input mb-6 flex justify-center">
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          class="w-1/4 text-center input-field mr-4 rounded-lg"
+        />
+        <input
+          type="text"
+          id="amount"
+          placeholder="Amount"
+          class="w-1/4 text-center input-field mr-4 rounded-lg"
+        />
+        <select id="type" class="bg-gray-200 rounded">
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+        <button class="bg-blue-500 p-2 rounded" id="add-entry">
+          Add Entry
+        </button>
+      </div>
+      <!------------Total Expense------------------------->
+      <div class="text-center mb-6">
+        <p id="Total-Income">Total Income: $0</p>
+        <p id="Total-Expenses">Total Expenses: $0</p>
+        <p id="Net-Balance">Net Balance: $0</p>
+      </div>
+      <!-------Entry List---------------------------------->
+      <div id="entry_list" class="bg-white p-4 mb-6 rounded shadow-lg">
+        <ul id="entries"></ul>
+      </div>
+      <!--------Reset--------------------------->
+
+      <button
+        id="reset"
+        class="bg-red-500 p-4 rounded-lg text-center text-white text-300"
+      >
+        Reset
+      </button>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
