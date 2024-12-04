@@ -4,9 +4,9 @@
   "description": "A template for HTML and CSS",
   "main": "index.html",
   "scripts": {
-    "start": "npx tailwindcss -i ./styles.css -o ./output.css --watch"
+    "start": "npx tailwindcss -i ./src/styles.css -o ./disk/styles.css --watch"
   },
-  "keywords": ["html", "css"],
+  "keywords": ["html", "css","js"],
   "author": "Ives van Hoorne",
   "license": "MIT",
   "devDependencies": {
